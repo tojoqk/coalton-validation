@@ -106,7 +106,7 @@ If you are using Quicklisp, you can load the system with the following.
 
 (coalton-toplevel
   (define applicative-example-1
-    (ap:apply * (make-list 2 3) (make-list 7 11 13)))
+    (ap:apply (pure *) (make-list 2 3) (make-list 7 11 13)))
   ;; => (14 22 26 21 33 39)
   )
 ```
