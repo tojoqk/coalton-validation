@@ -69,31 +69,24 @@ If you are using Quicklisp, you can load the system with the following.
       (_ (Err (make-list "skill: invalid skill")))))
 
   (define validation-example-1
-    (ap:apply Person
+    (ap:apply (pure Person)
               (validation:from-result (parse-name "john"))
               (validation:from-result (parse-age "24"))
               (validation:from-result (parse-skill "programming"))))
   ;; => #.(VALIDATION:OK #.(PERSON "john" 24 #.PROGRAMMING))
 
   (define validation-example-2
-    (ap:let ((name (validation:from-result (parse-name "john")))
-             (age (validation:from-result (parse-age "24")))
-             (skill (validation:from-result (parse-skill "programming"))))
-      (Person name age skill)))
-  ;; => #.(VALIDATION:OK #.(PERSON "john" 24 #.PROGRAMMING))
-
-  (define validation-example-3
-    (ap:let ((name (validation:from-result (parse-name "john")))
-             (age (validation:from-result (parse-age "24")))
-             (skill (validation:from-result (parse-skill "sleeping"))))
-      (Person name age skill)))
+    (ap:apply (pure Person)
+              (validation:from-result (parse-name "john"))
+              (validation:from-result (parse-age "24"))
+              (validation:from-result (parse-skill "sleeping"))))
   ;; => #.(VALIDATION:ERR ("skill: invalid skill"))
 
-  (define validation-example-4
-    (ap:let ((name (validation:from-result (parse-name "john")))
-             (age (validation:from-result (parse-age "-24")))
-             (skill (validation:from-result (parse-skill "sleeping"))))
-      (Person name age skill)))
+  (define validation-example-3
+    (ap:apply (pure Person)
+              (validation:from-result (parse-name "john"))
+              (validation:from-result (parse-age "-24"))
+              (validation:from-result (parse-skill "sleeping"))))
   ;; => #.(VALIDATION:ERR ("age: negative age" "skill: invalid skill"))
   )
 ```
@@ -114,12 +107,6 @@ If you are using Quicklisp, you can load the system with the following.
 (coalton-toplevel
   (define applicative-example-1
     (ap:apply * (make-list 2 3) (make-list 7 11 13)))
-  ;; => (14 22 26 21 33 39)
-
-  (define applicative-example-2
-    (ap:let ((x (make-list 2 3))
-             (y (make-list 7 11 13)))
-      (* x y)))
   ;; => (14 22 26 21 33 39)
   )
 ```
