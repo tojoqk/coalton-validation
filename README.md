@@ -1,4 +1,4 @@
-# coalton-validation
+# Validation
 
 Validation library for Coalton.
 
@@ -11,13 +11,13 @@ https://github.com/coalton-lang/coalton
 Next, place json-parser in your local repository (`~/common-lisp`, etc.).
 
 ```shell:~/common-lisp
-git clone https://github.com/tojoqk/coalton-validation.git
+git clone https://github.com/tojoqk/validation.git
 ```
 
 If you are using Quicklisp, you can load the system with the following.
 
 ```lisp
-(ql:quickload :coalton-validation)
+(ql:quickload :tokyo.tojo.validation)
 ```
 
 ## Examples
@@ -25,15 +25,15 @@ If you are using Quicklisp, you can load the system with the following.
 ### Validation
 
 ```
-(defpackage #:coalton-validation-validation-example
+(defpackage #:tokyo.tojo.validation-validation-example
   (:use #:coalton
         #:coalton-prelude)
   (:local-nicknames
-   (#:ap #:coalton-validation/applicative)
-   (#:validation #:coalton-validation/validation)
+   (#:ap #:tokyo.tojo.validation/applicative)
+   (#:validation #:tokyo.tojo.validation/validation)
    (#:string #:coalton-library/string)))
 
-(in-package #:coalton-validation-validation-example)
+(in-package #:tokyo.tojo.validation-validation-example)
 
 (named-readtables:in-readtable coalton:coalton)
 
@@ -101,13 +101,13 @@ If you are using Quicklisp, you can load the system with the following.
 ### Applicative
 
 ```lisp
-(defpackage #:coalton-validation-applicative-example
+(defpackage #:tokyo.tojo.validation-applicative-example
   (:use #:coalton
         #:coalton-prelude)
   (:local-nicknames
-   (#:ap #:coalton-validation/applicative)))
+   (#:ap #:tokyo.tojo.validation/applicative)))
 
-(in-package #:coalton-validation-applicative-example)
+(in-package #:tokyo.tojo.validation-applicative-example)
 
 (named-readtables:in-readtable coalton:coalton)
 

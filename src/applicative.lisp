@@ -1,8 +1,8 @@
-(defpackage #:coalton-validation/applicative
+(defpackage #:tokyo.tojo.validation/applicative
   (:use #:coalton
         #:coalton-prelude)
   (:export #:apply))
-(in-package #:coalton-validation/applicative)
+(in-package #:tokyo.tojo.validation/applicative)
 
 (named-readtables:in-readtable coalton:coalton)
 

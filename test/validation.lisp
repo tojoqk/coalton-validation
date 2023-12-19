@@ -1,4 +1,4 @@
-(in-package #:coalton-validation/test)
+(in-package #:tokyo.tojo.validation/test)
 
 (define-test validation-ok-test ()
   (matches (validation:Ok 3)

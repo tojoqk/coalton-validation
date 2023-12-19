@@ -1,13 +1,13 @@
-(defpackage #:coalton-validation/test
+(defpackage #:tokyo.tojo.validation/test
   (:use #:coalton
         #:coalton-prelude
         #:coalton-testing)
   (:local-nicknames
-   (#:ap #:coalton-validation/applicative)
-   (#:validation #:coalton-validation/validation))
+   (#:ap #:tokyo.tojo.validation/applicative)
+   (#:validation #:tokyo.tojo.validation/validation))
   (:export #:run-tests))
 
-(in-package #:coalton-validation/test)
+(in-package #:tokyo.tojo.validation/test)
 
 (named-readtables:in-readtable coalton:coalton)
 

@@ -1,4 +1,4 @@
-(defpackage #:coalton-validation/validation
+(defpackage #:tokyo.tojo.validation/validation
   (:use #:coalton
         #:coalton-prelude)
   (:shadow #:Ok
@@ -6,7 +6,7 @@
   (:export #:validation #:Ok #:Err
            #:to-result #:from-result))
 
-(in-package #:coalton-validation/validation)
+(in-package #:tokyo.tojo.validation/validation)
 
 (named-readtables:in-readtable coalton:coalton)
 

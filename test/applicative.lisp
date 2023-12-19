@@ -1,4 +1,4 @@
-(in-package #:coalton-validation/test)
+(in-package #:tokyo.tojo.validation/test)
 
 (define-test applicative-apply-list-test ()
   (matches (Cons 10 (Cons 14 (Cons 15 (Cons 21 (Nil)))))
