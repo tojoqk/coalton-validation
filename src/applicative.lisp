@@ -1,9 +1,7 @@
 (defpackage #:coalton-validation/applicative
   (:use #:coalton
         #:coalton-prelude)
-  (:shadow #:let)
-  (:export #:apply #:let))
-
+  (:export #:apply))
 (in-package #:coalton-validation/applicative)
 
 (named-readtables:in-readtable coalton:coalton)
@@ -13,12 +11,7 @@
   (define <*> (liftA2 id)))
 
 (cl:defmacro apply (f cl:&rest args)
-  `(op->l <*> (pure ,f) ,@args))
-
-(cl:defmacro let ((cl:&rest bindings) cl:&body body)
-  `(apply (fn ,(cl:mapcar #'cl:first bindings)
-            ,@body)
-          ,@(cl:mapcar #'cl:second bindings)))
+  `(op->l <*> ,f ,@args))
 
 (cl:defmacro op->l (op x y cl:&rest args)
   (cl:cond
