@@ -11,7 +11,7 @@ Since it depends on Coalton, please refer to the link below to install Coalton.
 Next, place json-parser in your local repository (`~/common-lisp`, etc.).
 
 ```shell
-git clone https://git.tojo.tokyo/coalton/validation.git
+git clone https://github.com/tojoqk/tokyo.tojo.validation.git
 ```
 
 If you are using Quicklisp, you can load the system with the following.
