@@ -10,7 +10,7 @@ https://github.com/coalton-lang/coalton
 
 Next, place json-parser in your local repository (`~/common-lisp`, etc.).
 
-```shell:~/common-lisp
+```shell
 git clone https://github.com/tojoqk/validation.git
 ```
 
