@@ -6,7 +6,7 @@ Validation library for Coalton.
 
 Since it depends on Coalton, please refer to the link below to install Coalton.
 
-https://github.com/coalton-lang/coalton
+[https://github.com/coalton-lang/coalton](https://github.com/coalton-lang/coalton)
 
 Next, place json-parser in your local repository (`~/common-lisp`, etc.).
 
