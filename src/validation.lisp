@@ -4,7 +4,8 @@
   (:shadow #:Ok
            #:Err)
   (:export #:validation #:Ok #:Err
-           #:to-result #:from-result))
+           #:to-result #:from-result)
+  (:nicknames #:tokyo.tojo.validation))
 
 (in-package #:tokyo.tojo.validation/validation)
 
